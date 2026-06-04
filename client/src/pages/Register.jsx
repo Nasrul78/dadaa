@@ -95,6 +95,7 @@ const Register = () => {
                     type={showPassword ? "text" : "password"}
                     required
                     placeholder="••••••••"
+                    icon={Lock}
                   />
                   <button
                     type="button"
@@ -112,6 +113,7 @@ const Register = () => {
                     type={showConfirmPassword ? "text" : "password"}
                     required
                     placeholder="••••••••"
+                    icon={Lock}
                   />
                   <button
                     type="button"

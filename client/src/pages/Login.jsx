@@ -65,31 +65,34 @@ const Login = () => {
                 icon={Mail}
               />
 
-              <div className="relative">
-                <div className="flex justify-between items-center mb-0.5 absolute right-1 -top-7">
+              <div className="space-y-1">
+                <div className="relative">
+                  <Input
+                    label="Password"
+                    name="password"
+                    id="password"
+                    type={showPassword ? "text" : "password"}
+                    autoComplete="current-password"
+                    required
+                    placeholder="••••••••"
+                    icon={Lock}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 bottom-3 text-slate-500 hover:text-white transition-colors z-20"
+                  >
+                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
+                  </button>
+                </div>
+                <div className="flex justify-end pr-1">
                   <Link
-                    to="#"
+                    to="/forgot-password"
                     className="text-xs font-bold text-primary hover:text-primary-hover transition-colors"
                   >
-                    Forgot?
+                    Forgot password?
                   </Link>
                 </div>
-                <Input
-                  label="Password"
-                  name="password"
-                  id="password"
-                  type={showPassword ? "text" : "password"}
-                  autoComplete="current-password"
-                  required
-                  placeholder="••••••••"
-                />
-                <button
-                  type="button"
-                  onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 bottom-3 text-slate-500 hover:text-white transition-colors"
-                >
-                  {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                </button>
               </div>
 
               <div className="flex items-center ml-1">
